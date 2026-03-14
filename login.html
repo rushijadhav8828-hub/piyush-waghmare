@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Online Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Hospital Online Registration</h1>
+
+    <form id="registrationForm">
+        <label>Patient Name</label>
+        <input type="text" id="name" required>
+
+        <label>Age</label>
+        <input type="number" id="age" required>
+
+        <label>Gender</label>
+        <select id="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <label>Mobile Number</label>
+        <input type="tel" id="mobile" required>
+
+        <label>Address</label>
+        <textarea id="address"></textarea>
+
+        <label>Admission Type</label>
+        <select id="admission">
+            <option>OPD</option>
+            <option>General</option>
+            <option>Emergency</option>
+        </select>
+
+        <label>Body Checkup Services</label>
+        <div class="checkups">
+            <input type="checkbox" value="Blood Test"> Blood Test
+            <input type="checkbox" value="X-Ray"> X-Ray
+            <input type="checkbox" value="ECG"> ECG
+            <input type="checkbox" value="Full Body Checkup"> Full Body Checkup
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Document Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #333;
+        }
+
+        header {
+            background: #0a6cf1;
+            padding: 15px 40px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 60px 40px;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #0a6cf1, #3da9fc);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .about, .contact, .form-section {
+            background: white;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1000px;
+            padding: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        input, select, textarea, button {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            background: #0a6cf1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #084bb5;
+        }
+
+        footer {
+            background: #081f3f;
+            color: white;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .footer-container h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>DocVerify</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Hospital Gallery</a></li>
+            <li><a href="#register">Registration</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="index.html">patient admit </a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Hospital Document Verification</h1>
+    <p>Secure • Fast • Trusted Verification System</p>
+</section>
+
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <br>
+    <p>
+        We provide a secure and reliable hospital document verification platform.
+        Our system ensures authenticity of medical documents, patient records,
+        and hospital credentials using advanced validation processes.
+    </p>
+</section>
+
+<section id="gallery">
+    <h2 style="text-align:center; margin-bottom:30px;">Hospital Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1576765607924-bb6d7bcd5c0b" alt="">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="">
+        <img src="https://images.unsplash.com/photo-1580281657527-47e0bcb8c5a9" alt="">
+        <img src="https://images.unsplash.com/photo-1586773860383-dab5f3bc1a27" alt="">
+    </div>
+</section>
+
+<section class="form-section" id="register">
+    <h2>Document Verification Form</h2>
+    <br>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="hospital" placeholder="Hospital Name" required>
+
+        <select id="document">
+            <option value="">Select Document Type</option>
+            <option>Medical Certificate</option>
+            <option>Patient Report</option>
+            <option>Doctor License</option>
+            <option>Hospital Registration</option>
+        </select>
+
+        <input type="file" required>
+
+        <button type="submit">Submit for Verification</button>
+    </form>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <br>
+    <p>Email: support@docverify.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: City Hospital Road, India</p>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div>
+            <h3>DocVerify</h3>
+            <p>Trusted hospital document verification platform ensuring security and transparency.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Registration</p>
+            <p>Contact</p>
+        </div>
+
+        <div>
+            <h3>Services</h3>
+            <p>Document Validation</p>
+            <p>Hospital Records</p>
+            <p>Patient Reports</p>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>LinkedIn</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 DocVerify | All Rights Reserved
+    </div>
+</footer>
+
+<script>
+    function validateForm() {
+        const documentType = document.getElementById("document").value;
+
+        if (documentType === "") {
+            alert("Please select a document type.");
+            return false;
+        }
+
+        alert("Form submitted successfully for verification!");
+        return true;
+    }
+</script>
+
+</body>
+</html>
